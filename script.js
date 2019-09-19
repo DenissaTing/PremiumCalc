@@ -10,7 +10,7 @@ async function getData() {
   const carsData = await carsDataReq.json();  
   const cleaned = carsData.map(car => ({
     premium: car.policy_annual_premium,
-    age: car.auto_year,
+    age: car.age,
   }))
   .filter(car => (car.premium != null && car.age != null));
   
